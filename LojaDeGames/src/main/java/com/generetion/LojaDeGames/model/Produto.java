@@ -35,6 +35,10 @@ public class Produto {
 	@Size(min = 5, max = 1000, message = "A descriçao deve conter entre 10 e no maximo 1000 catactere")
 	private String decricao;
 
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Usuario usuario;
+
 	public Long getId() {
 		return id;
 	}
